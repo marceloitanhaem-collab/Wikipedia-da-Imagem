@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipédia da Imagem - Laboratório</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+            margin: 0;
+        }
+        h1 {
+            color: #38bdf8;
+            margin-bottom: 5px;
+        }
+        .subtitle {
+            color: #94a3b8;
+            margin-bottom: 30px;
+        }
+        .container {
+            display: flex;
+            gap: 40px;
+            background-color: #1e293b;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            max-width: 900px;
+            width: 100%;
+        }
+        .image-box {
+            position: relative;
+            flex: 1;
+        }
+        .image-box img {
+            width: 100%;
+            border-radius: 8px;
+            display: block;
+        }
+        /* Pontos de Interação (Mãozinha/Hotspots) */
+        .hotspot {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #38bdf8;
+            border: 2px solid #ffffff;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 0 10px #38bdf8;
+            transition: transform 0.2s;
+        }
+        .hotspot:hover {
+            transform: scale(1.3);
+            background-color: #0284c7;
+        }
+        /* Posicionando os pontos em cima do fone */
+        #ponto-haste { top: 15%; left: 50%; }
+        #ponto-almofada { top: 55%; left: 28%; }
+        #ponto-chip { top: 65%; left: 70%; }
+
+        .details-box {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .layer-box {
+            background-color: #0f172a;
+            padding: 15px;
+            border-left: 4px solid #38bdf8;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 15px;
+        }
+        .layer-title {
+            font-weight: bold;
+            color: #38bdf8;
+            font-size: 12pt;
+            text-transform: uppercase;
+        }
+        .price-tag {
+            background-color: #22c55e;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Wikipédia da Imagem</h1>
+    <p class="subtitle">Laboratório Inicial: Produtos de Tecnologia (Passe o mouse nos pontos azuis)</p>
+
+    <div class="container">
+        <div class="image-box">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Fone de Ouvido">
+            
+            <div class="hotspot" id="ponto-haste" title="Clique para ver o Plástico"></div>
+            <div class="hotspot" id="ponto-almofada" title="Clique para ver o Tecido"></div>
+            <div class="hotspot" id="ponto-chip" title="Clique para ver os Componentes"></div>
+        </div>
+
+        <div class="details-box">
+            <h2>Fone de Ouvido Premium X1</h2>
+            
+            <div class="layer-box">
+                <div class="layer-title">Nível 1: Mercado (Fricção Zero)</div>
+                <p>Menor preço encontrado pelos nossos agentes: <strong>R$ 189,90</strong> no e-commerce parceiro.</p>
+                <div class="price-tag">Melhor Preço Garantido</div>
+            </div>
+
+            <div class="layer-box">
+                <div class="layer-title">Nível 2: Escalonamento de Material</div>
+                <p><strong>Arco Superior:</strong> Fabricado em Plástico ABS Injetado de alta densidade (importado de Taiwan).</p>
+                <p><strong>Almofadas:</strong> Couro sintético PU com espuma de memória auto-extinguível.</p>
+            </div>
+
+            <div class="layer-box">
+                <div class="layer-title">Nível 3: A Toca do Coelho (Verdade Oculta)</div>
+                <p><em>Análise Dialética:</em> Este modelo utiliza exatamente o mesmo driver de áudio de 40mm e a mesma carcaça de plástico de uma grife que custa R$ 799. Você está economizando R$ 609 por não pagar pelo logotipo da marca famosa.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
